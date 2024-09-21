@@ -1,0 +1,65 @@
+<div id="mySidebar" class="sidebar">
+  <div class="sidebar-header">
+    <h3>Menu</h3>
+    <button class="toggle-btn" (click)="toggleNav()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <a href="#"><i class="fas fa-chart-line"></i> <span>Tableau de bord</span></a>
+  <a href="#"><i class="fas fa-search"></i> <span>Recherche Courrier</span></a>
+
+  <!-- Courriers avec sous-menus -->
+  <a href="#" (click)="toggleDropdown('courriersDropdown')">
+    <i class="fas fa-envelope"></i> <span>Courriers</span>
+    <i class="fas fa-chevron-down dropdown-icon"></i>
+  </a>
+  <ul id="courriersDropdown" class="dropdown-menu">
+    <li><a href="#">Ajouter</a></li>
+    <li><a href="#">Modifier</a></li>
+    <li><a href="#">Supprimer</a></li>
+    <li><a href="#">Imputation</a></li>
+    <li><a href="#">Liste</a></li>
+  </ul>
+
+  <!-- Gestion des actes avec sous-menus -->
+  <a href="#" (click)="toggleDropdown('actesDropdown')">
+    <i class="fas fa-cog"></i> <span>Gestion des actes</span>
+    <i class="fas fa-chevron-down dropdown-icon"></i>
+  </a>
+  <ul id="actesDropdown" class="dropdown-menu">
+    <li><a href="#">Ajouter</a></li>
+    <li><a href="#">Modifier</a></li>
+    <li><a href="#">Supprimer</a></li>
+    <li><a href="#">Liste</a></li>
+  </ul>
+
+  <a href="#"><i class="fas fa-pencil-alt"></i> <span>Annotation</span></a>
+  <a href="#"><i class="fas fa-building"></i> <span>Division</span></a>
+  <a href="#"><i class="fas fa-sitemap"></i> <span>Structure</span></a>
+
+  <!-- Personne avec sous-menus -->
+  <a href="#" (click)="toggleDropdown('personneDropdown')">
+    <i class="fas fa-user"></i> <span>Personne</span>
+    <i class="fas fa-chevron-down dropdown-icon"></i>
+  </a>
+  <ul id="personneDropdown" class="dropdown-menu">
+    <li><a href="#">Ajouter</a></li>
+    <li><a href="#">Liste</a></li>
+  </ul>
+
+  <!-- Paramètres avec sous-menus -->
+  <a href="#" (click)="toggleDropdown('parametresDropdown')">
+    <i class="fas fa-cogs"></i> <span>Paramètres</span>
+    <i class="fas fa-chevron-down dropdown-icon"></i>
+  </a>
+  <ul id="parametresDropdown" class="dropdown-menu">
+    <li><a href="#">Personnel</a></li>
+    <li><a href="#">Utilisateur</a></li>
+  </ul>
+</div>
+
+<div id="main">
+  <h2>Modern Sidebar with Internal Toggle</h2>
+  <p>Le bouton bascule est à l'intérieur de la barre latérale en haut. Cliquez dessus pour ouvrir ou fermer la barre latérale.</p>
+</div>
